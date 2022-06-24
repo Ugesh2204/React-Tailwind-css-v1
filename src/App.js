@@ -1,19 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Content from './components/Content';
+import Home from  './pages/Home';
+import About from './pages/About';
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <div class="container mx-auto">
-        <Hero/>
-        <Content/>
-      </div>
+  
+    <Navbar/>
+
+    <Routes>
+       
+       <Route  path='/' element = {<Home/>}/>
+       <Route path='/about' element = {<About/>}/>
+   
+   </Routes>
+  
     
-    </>
+ 
+
+  
+  </>
+
   );
 }
 
